@@ -1,0 +1,17 @@
+@import 'src/styles/colors';
+
+.circleLetter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  border-radius: 50%;
+  background: var(--select-initials-background);
+  width: 14px;
+  height: 14px;
+
+  font-family: Roboto;
+  font-size: 7px;
+  line-height: 8px;
+  color: #D1DAE3;
+}

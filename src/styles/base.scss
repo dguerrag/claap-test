@@ -1,0 +1,17 @@
+:root {
+  body.chakra-ui-light {
+    --select-background: #F0F7FC;
+    --select-color: #B6C1D0;
+    --tag-border: none;
+    --tag-background: white;
+    --select-initials-background: #607284;
+  }
+
+  body.chakra-ui-dark {
+    --select-background: #202437;
+    --select-color: #EE748F;
+    --tag-border: 1px solid #EE748F;
+    --tag-background: #202437;
+    --select-initials-background: #EE748F;
+  }
+}

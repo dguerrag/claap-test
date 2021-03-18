@@ -1,0 +1,65 @@
+@import 'src/styles/colors';
+@import 'src/styles/mixins';
+
+
+
+.container {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+
+  button {
+    margin-left: 16px;
+  }
+}
+
+.inputWrapper {
+  overflow: visible;
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+
+.emails {
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  max-height: 180px;
+  border-radius: 6px;
+  padding: 8px 10px;
+
+  background: var(--select-background);
+  box-sizing: border-box;
+  transition: all 0.1s;
+
+  overflow: scroll;
+  @include hideScrollbar();
+
+  input {
+    background: var(--select-background);
+    border: none;
+    outline: none;
+    width: 175px;
+    transition: 0s width;
+    font-size: 10px;
+    line-height: 20px;
+    color: var(--select-color);
+    &[data-emails=true] {
+      transform: translateY(-4px);
+    }
+  }
+
+  &.error {
+    border-color: $error-color;
+    box-shadow: 0 0 0 3px rgba($error-color, 0.1);
+  }
+
+  &.focus {
+    border-color: $primary-color;
+    box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+  }
+}

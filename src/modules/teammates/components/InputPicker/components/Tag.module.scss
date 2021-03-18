@@ -1,0 +1,50 @@
+@import 'src/styles/colors';
+
+.tag {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+
+  margin-right: 6px;
+  margin-bottom: 8px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background: var(--tag-background);
+
+  border: var(--tag-border);
+
+  span:first-child {
+    margin-right: 8px;
+  }
+
+  span:last-child:hover {
+    cursor: pointer;
+  }
+
+  &.tagError {
+    background: $error-color;
+
+    p {
+      color: $primary-color;
+    }
+    & > svg path {
+      fill: white;
+    }
+  }
+
+  & > * {
+    margin-right: 8px;
+  }
+
+  & > svg path {
+    fill: var(--select-color);
+  }
+
+  & > svg:last-child {
+    border-radius: 50%;
+    border: 1px solid var(--select-color);
+  }
+}

@@ -1,0 +1,40 @@
+@import 'src/styles/mixins';
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+
+  position: absolute;
+  top: calc(100% + 4px);
+  width: 100%;
+  transform: translateX(-10px);
+
+  overflow: scroll;
+  @include hideScrollbar();
+  max-height: 150px;
+
+  .user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    background: var(--select-background);
+
+    color: var(--select-color);
+    padding: 20px;
+    font-size: 12px;
+
+    &:hover {
+      background: #607284;
+      cursor: pointer;
+    }
+
+    & > :first-child {
+      margin-right: 6px;
+    }
+  }
+}
